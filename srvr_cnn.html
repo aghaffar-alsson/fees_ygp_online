@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<body>
+<script>
+
+var express = require('express');
+var app = express();
+
+app.get('/', function (req, res) {
+   
+    var sql = require("mssql");
+
+    // config for your database
+    var config = {
+        user: 'alssonatt_login',
+        password: 'Alsson@2023',
+        server: '196.219.36.20', 
+        database: 'AlssonAtt' 
+    };
+
+    // connect to your database
+    sql.connect(config, function (err) {
+    
+        if (err) console.log(err);
+
+        // create Request object
+        var request = new sql.Request();
+           
+        // query to the database and get the records
+        request.query('select * from userinfo', function (err, recordset) {
+            
+            if (err) console.log(err)
+
+            // send records as a response
+            res.send(recordset);
+            
+        });
+    });
+});
+
+var server = app.listen(5000, function () {
+    console.log('Server is running..');
+
+});    
+// var connection = new ActiveXObject("ADODB.Connection") ;
+
+// var connectionstring="Data Source=196.219.36.20;Initial Catalog=alssonatt;User ID=alssonatt_login;Password=Alsson@2023;Provider=SQLOLEDB";
+
+// connection.Open(connectionstring);
+// var rs = new ActiveXObject("ADODB.Recordset");
+
+// rs.Open("SELECT * FROM userinfo", connection);
+// rs.MoveFirst
+// while(!rs.eof)
+// {
+//    document.write(rs.fields(1));
+//    rs.movenext;
+// }
+
+// rs.close;
+// connection.close;
+
+</script>
+</body>

@@ -1,0 +1,59 @@
+<! DOCTYPE html>
+<!-- <meta name="viewport";content="width=device-width, initial-scale=1";content="text/html";charset="utf-8" /> -->
+<meta charset="utf-8" />
+
+<html lang="en">
+    <title>Trials for CSS</title>
+<head>
+    <!-- <link rel="stylesheet" type="text/css" href="style.css">   -->
+<style>
+/*    @import url("style.css"); */
+    body {background-color:lavender;}
+    /* h1 {background-color: beige ;margin-left: 20px;}
+    p {background-color: beige;margin-left: 30px;} */
+    h1 {text-align: left; color: maroon; font-size: x-large;} /*here affecting the paragraph with ID "h1" */
+    p {text-align: left; color: maroon;} /*here affecting the paragraph with name "p" */
+    #idd {text-align: center; text-decoration: underline; text-transform: uppercase; color:green; } /*here affecting the paragraph with ID "idd" */
+    .clss {text-align: center; text-decoration: underline; text-transform: uppercase; color:orangered; } /*here affecting the class "clss" */
+    p.txtcntr {color: maroon; text-align: left; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: 150%;} /*here affecting the class "txtcntr" with left alignment*/
+    p.txtlrg {font-size: 250%; } /*here affecting the class "txtlrg" with large font*/
+    /* * {text-align: left;color: blue} here affecting all paragraphs here affecting all paragraphs */
+    /*here to select multiple elements*/
+    h1 , p {color: purple} /*here to select multiple elements*/
+    /*to comment a line on CSS use '/*&*/
+    h2 {background-color:tomato;color: purple} /*here to set color by name - tomato*/
+    p3 {background-color:DodgerBlue;color: purple} /*here to set color by name - DodgerBlue*/
+    p4 {border:2px solid black;color: black} /*here to set the border color*/
+    body {background-color: lightblue;}
+</style>
+</head>
+<body>
+    <h1> Hello world </h1>
+    <p> I like CSS</p>
+    <p> Here to select an HTML item using name</p>
+    <p id="IDD"> Here to select an HTML item using ID</p>
+    <p class="clss"> Here to select an HTML item using class</p>
+    <p class="txtcntr"> This pragraph is red & lefted.</p>
+    <p class="txtcntr txtlrg"> This pragraph is red, lefted & large.</p>
+    <!--this is how to comment a line on HTML-->
+    <h2>Set Tomato Color</h2>
+    <p3>Set Dodger Blue Color</p3>
+    <p4>Set border of text</p4>
+    <!--set colors using RGB-->
+    <!-- <h2 style="background-color:rgb(255, 0, 0);">rgb(255, 0, 0)</h2>
+    <h2 style="background-color:rgb(0, 255, 0);">rgb(0, 255, 0)</h2>
+    <h2 style="background-color:rgb(0, 0, 255);">rgb(0, 0, 255)</h2>
+    <h2 style="background-color:rgb(255, 109, 108);">rgb(255, 109, 108)</h2>
+    <h2 style="background-color:rgb(105, 105, 105);">rgb(105, 105, 105)</h2>
+    <h2 style="background-color:rgb(200, 120, 200);">rgb(200, 120, 200)</h2> -->
+    <!-- set colors using HEX
+    <h2 style="background-color:#ffffff;">#ffffff</h2>
+    <h2 style="background-color:#ff0000;">#ff0000</h2>
+    <h2 style="background-color:#00ff00;">#00ff00</h2>
+    <h2 style="background-color:#0000ff;">#0000ff</h2>
+    <h2 style="background-color:#000000;">#000000</h2> -->
+
+</body>
+
+</html>
+<!-- p {color: red;text-align: left;} -->

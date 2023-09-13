@@ -1,0 +1,20 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "meta-viewport": "off"
+  }
+}
+
+{
+  "connector": {...},
+  "formatters": [...],
+  "hints": {
+      "no-inline-styles": [ "warning", {
+          "requireNoStyleElement": true
+      }],
+      ...
+  },
+  ...
+}
